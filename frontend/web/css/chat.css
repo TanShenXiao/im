@@ -2,8 +2,8 @@
 ul { list-style-type: none; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; color:#f60; }
-h5{width:100%;}
-#textarea{width:790px;}
+h5{width:100%;font-size:12px;}
+#textarea{width:790px;height:40px;}
 .content { width:auto; height: auto; margin: 0 auto; text-align: center; }
 .chatBox { width: 1000px; border: 1px #666666 solid; height: auto; margin: 0 auto; margin-top: 0px; position: relative; }
 .chatLeft { border-right: 1px #bebebe solid; width: 800px; height: auto; float:left; }

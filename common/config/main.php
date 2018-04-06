@@ -26,9 +26,9 @@ return [
         ],
 		'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=106.14.139.74;dbname=weipan',
+            'dsn' => 'mysql:host=120.77.37.194;dbname=cms',
             'username' => 'root',
-            'password' => 'Djlhy1987042401',
+            'password' => '123456',
             'charset' => 'utf8mb4',
         ],
         'mailer' => [
