@@ -19,17 +19,17 @@ return [
 //         ],
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=cms',
+            'dsn' => 'mysql:host=127.0.0.1;dbname=test',
             'username' => 'root',
-            'password' => '5723410',
+            'password' => '123456',
             'charset' => 'utf8',
         ],
-        'db2' => [
+		'db2' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=120.77.37.194;dbname=cms',
+            'dsn' => 'mysql:host=106.14.139.74;dbname=weipan',
             'username' => 'root',
-            'password' => '5723410',
-            'charset' => 'utf8',
+            'password' => 'Djlhy1987042401',
+            'charset' => 'utf8mb4',
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',

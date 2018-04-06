@@ -58,6 +58,11 @@ class MemberUser extends \backend\models\BaseModel
         return 'user';
     }
 
+    public static function getDb()
+    {
+       return Yii::$app->get('db2');
+    }
+
     /**
      * @inheritdoc
      */

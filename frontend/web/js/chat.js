@@ -5,9 +5,9 @@ function message(){
     };
 function sockent(){
 	if(window.token){
-            window.websocket=new WebSocket("ws://120.77.37.194:9501?token="+window.token);
+            window.websocket=new WebSocket("ws://116.62.247.75:9501?token="+window.token);
         }else{
-             window.websocket=new WebSocket("ws://120.77.37.194:9501");
+             window.websocket=new WebSocket("ws://116.62.247.75:9501");
         }
 	}
 $(document).ready(function(){

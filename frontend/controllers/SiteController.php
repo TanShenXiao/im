@@ -31,8 +31,8 @@ class SiteController extends \yii\web\Controller
         $fd=Admin_fd::find()->where(["not",["fd"=>null]])->orderBy(['sort'=>SORT_DESC])->asArray()->all();
         if(isset($_GET['token']) and !empty($_GET['token'])){
             $uid=MemberUser::find()->where(["id"=>$_GET['token']])->select(['id','nickname','alias','portrait'])->one();
-            if(empty($uid->portrait)){
-                 $uid->portrait=rand(1,132).".jpg";
+            if(!empty($uid) and empty($uid->portrait)){
+                 $uid->portrait=rand(1,84).".jpg";
                  $uid->save();
             }
             if(!empty($uid['id']) and $uid['id'] == 480) {
