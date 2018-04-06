@@ -84,10 +84,10 @@
                                 <div class='wrap-text' >
                                     <h5 style='text-align: right' class='clearfix' ><?=$val['send_user']?>
                                         <div clsss='clearfix' style='float:left;'>
-                                            <span><?=date("Y-m-d H:i:s",$val['create'])?></span>
+                                            <span><!---<?=date("Y-m-d H:i:s",$val['create'])?>---></span>
                                         </div>
                                     </h5>
-                                    <div><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
+                                    <div class="content-text"><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
                                 </div>
                             <div style='clear:both;'></div>
                             </div>
@@ -98,10 +98,10 @@
                                     <h5 style='text-align: left' class='clearfix' >
                                         <?=$val['send_user']?>
                                         <div clsss='clearfix' style='float:right;'>
-                                            <span><?=date("Y-m-d H:i:s",$val['create'])?></span>
+                                            <span><!---<?=date("Y-m-d H:i:s",$val['create'])?>---></span>
                                         </div>
                                     </h5>
-                                    <div><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
+                                    <div class="content-text"><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
                                 </div>
                                 <div style='clear:both;'></div>
                             </div>
