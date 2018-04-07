@@ -35,21 +35,21 @@ class SiteController extends \yii\web\Controller
                  $uid->portrait=rand(1,84).".jpg";
                  $uid->save();
             }
-            if(!empty($uid['id']) and $uid['id'] == 480) {
-                $array=[];
-            }else{
-                $fdnum=count($fd);
-                if($fdnum < 17){
-                    $array=array_slice($array,0,17-$fdnum);
-                }elseif($fdnum > 17){
-                    $array=[];
-                    $fd=array_slice($fd,0,17);
-                }else{
-                    $array=array_slice($array,0,17);
-                }
-            }
         }else{
             $uid=null;
+        }
+        if(!empty($uid['id']) and $uid['id'] == 394) {
+            $array=[];
+        }else{
+            $fdnum=count($fd);
+            if($fdnum < 15){
+                $array=array_slice($array,0,15-$fdnum);
+            }elseif($fdnum > 15){
+                $array=[];
+                $fd=array_slice($fd,0,15);
+            }else{
+                $array=array_slice($array,0,15);
+            }
         }
         return $this->render('index',['record'=>$record,'uid'=>$uid,'member'=>$fd,'randname'=>$array]);
     }
