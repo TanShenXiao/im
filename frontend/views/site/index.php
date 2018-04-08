@@ -5,7 +5,7 @@
  if(isset($uid['id']) and !empty($uid['id']) and $uid['id']==394){
      $num=count($member);
  }else{
-     $num=$number+400+count($member);
+     $num=$number+400;
  }
 
 ?>
