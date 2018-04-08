@@ -14,7 +14,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>前端js(jquery)在线聊天</title>
+    <title>中和商城</title>
     <meta name="keywords" content="前端js在线聊天" />
     <meta name="description" content="前端js在线聊天" />
     <link rel="stylesheet" type="text/css" href="/css/chat.css" />
