@@ -2,10 +2,10 @@
 
  $corf=Yii::$app->request->csrfToken;
  use yii\helpers\Json;
- if(isset($uid['id']) and !empty($uid['id']) and $uid['id']==480){
+ if(isset($uid['id']) and !empty($uid['id']) and $uid['id']==394){
      $num=count($member);
  }else{
-     $num=count($member)+400;
+     $num=$number+400+count($member);
  }
 
 ?>
@@ -77,12 +77,12 @@
                 </div>
                 <div class="chat01_content">
                     <div class="message_box mes3" style="display: block;">
-                        <?php foreach ($record as $val): if($val['uid']) if($val['uid'] == $uid['id']){ ?>
+                        <?php foreach ($record as $val): /* if($val['uid'] == $uid['id']){ ?>
 
                             <div class='message clearfix'>
                                 <div class='user-logo'><img src="/portrait/<?=$val['portrait']?>"></div>
                                 <div class='wrap-text' >
-                                    <h5 style='text-align: right' class='clearfix' ><?=$val['send_user']?>
+                                    <h5 style='text-align:left' class='clearfix' ><?=$val['send_user']?>
                                         <div clsss='clearfix' style='float:left;'>
                                             <span><!---<?=date("Y-m-d H:i:s",$val['create'])?>---></span>
                                         </div>
@@ -91,10 +91,10 @@
                                 </div>
                             <div style='clear:both;'></div>
                             </div>
-                        <?php }else{    ?>
+                        <?php }else{   */ ?>
                             <div class='message clearfix'>
                                 <div class='user-logo2'><img src="/portrait/<?=$val['portrait']?>"></div>
-                                <div >
+                                <div class="wrap-text2">
                                     <h5 style='text-align: left' class='clearfix' >
                                         <?=$val['send_user']?>
                                         <div clsss='clearfix' style='float:right;'>
@@ -105,7 +105,7 @@
                                 </div>
                                 <div style='clear:both;'></div>
                             </div>
-                        <?php }endforeach; ?>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

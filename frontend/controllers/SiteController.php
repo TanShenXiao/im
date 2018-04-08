@@ -29,6 +29,7 @@ class SiteController extends \yii\web\Controller
         shuffle($array);
         $record=AdminRecord::find()->limit(200)->orderBy(['create'=>SORT_ASC])->asArray()->all();
         $fd=Admin_fd::find()->where(["not",["fd"=>null]])->orderBy(['sort'=>SORT_DESC])->asArray()->all();
+        $num=MemberUser::find()->count();
         if(isset($_GET['token']) and !empty($_GET['token'])){
             $uid=MemberUser::find()->where(["id"=>$_GET['token']])->select(['id','nickname','alias','portrait'])->one();
             if(!empty($uid) and empty($uid->portrait)){
@@ -51,7 +52,7 @@ class SiteController extends \yii\web\Controller
                 $array=array_slice($array,0,15);
             }
         }
-        return $this->render('index',['record'=>$record,'uid'=>$uid,'member'=>$fd,'randname'=>$array]);
+        return $this->render('index',['record'=>$record,'uid'=>$uid,'number'=>$num,'member'=>$fd,'randname'=>$array]);
     }
 
     /**
