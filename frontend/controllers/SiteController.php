@@ -27,7 +27,7 @@ class SiteController extends \yii\web\Controller
     {
         $array=RandName::name();
         shuffle($array);
-        $record=AdminRecord::find()->limit(200)->orderBy(['create'=>SORT_ASC])->asArray()->all();
+        $record=array_reverse(AdminRecord::find()->limit(200)->orderBy(['create'=>SORT_DESC])->asArray()->all(),true);
         $fd=Admin_fd::find()->where(["not",["fd"=>null]])->orderBy(['sort'=>SORT_DESC])->asArray()->all();
         $num=MemberUser::find()->count();
         if(isset($_GET['token']) and !empty($_GET['token'])){
