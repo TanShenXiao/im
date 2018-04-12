@@ -33,7 +33,8 @@ class AdminRecord extends \backend\models\BaseModel
         return [
             [['uid', 'portrait', 'send_user', 'content'], 'required'],
             [['uid', 'type', 'create', 'update'], 'integer'],
-            [['portrait', 'send_user', 'content'], 'string', 'max' => 255]
+            [['portrait', 'send_user'], 'string', 'max' => 255],
+			[['content'],'string','max'=>2000],
         ];
     }
 

@@ -66,7 +66,7 @@
 <div class="content">
     <div class="chatBox">
         <div class="chatLeft">
-            <div class="chat01">
+            <div class="chat01" >
                 <div class="chat01_title">
                     <ul class="talkTo">
                         <li><a href="javascript:;">聊天室</a></li>
@@ -109,7 +109,7 @@
                     </div>
                 </div>
             </div>
-            <div class="chat02">
+            <div class="chat02" >
                 <div class="chat02_title">
                     <a class="chat02_title_btn ctb01" href="javascript:;"></a>
                     <a class="chat02_title_btn ctb02"   href="javascript:;" title="选择文件">
