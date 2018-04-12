@@ -154,6 +154,8 @@ class Websocket extends  Model
                 $model->create=time();
                 $model->update=time();
                 $model->save();
+                print_r($model->errors);
+                echo "大家好";
                 $data['name']=$modelfd->name;
         foreach ($server->connections as $fd){
             if($fd != $arr[2]) {
