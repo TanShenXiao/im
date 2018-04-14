@@ -201,8 +201,8 @@ input.f1 , input.f2 { display: none; }
 
 }
 .content-text{
-	font-size:12px;
-	margin-top: 8px;
+	font-size:14px;
+	margin-top: -5px;
 }
 @media screen and (max-width:1000px){
 	 #textarea{width:100%; border:0px;border-bottom: 0px #666666 solid;}

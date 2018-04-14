@@ -95,13 +95,23 @@
                             <div class='message clearfix'>
                                 <div class='user-logo2'><img src="/portrait/<?=$val['portrait']?>"></div>
                                 <div class="wrap-text2">
-                                    <h5 style='text-align: left' class='clearfix' >
-                                        <?=$val['send_user']?>
-                                        <div clsss='clearfix' style='float:right;'>
-                                            <span><!---<?=date("Y-m-d H:i:s",$val['create'])?>---></span>
-                                        </div>
+
+			<!--
+								   <h5 style='text-align: left'   >
+								-->
+								
+									<div style="font-size:14px;text-align: left;margin-top: -5px;color: blue;"  >
+                                       
+									   <?=$val['send_user']?>
+										
+									</div>
+										<!--
                                     </h5>
-                                    <div class="content-text"><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
+									-->
+									
+									
+									
+                                    <div class="content-text" ><?php $data=Json::decode(base64_decode($val['content']));echo $data['msg'];?></div>
                                 </div>
                                 <div style='clear:both;'></div>
                             </div>
@@ -215,85 +225,85 @@
                             <div class="wl_faces_main" style="display:none;">
                                 <ul>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_01.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_02.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_03.gif" /></a></li>
+                                            <img src="/img/qq/emo_01.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_02.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_03.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_04.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_05.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_06.gif" /></a></li>
+                                            <img src="/img/qq/emo_04.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_05.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_06.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_07.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_08.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_09.gif" /></a></li>
+                                            <img src="/img/qq/emo_07.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_08.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_09.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_10.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_11.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_12.gif" /></a></li>
+                                            <img src="/img/qq/emo_10.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_11.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_12.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_13.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_14.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_15.gif" /></a></li>
+                                            <img src="/img/qq/emo_13.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_14.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_15.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_16.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_17.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_18.gif" /></a></li>
+                                            <img src="/img/qq/emo_16.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_17.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_18.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_19.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_20.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_21.gif" /></a></li>
+                                            <img src="/img/qq/emo_19.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_20.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_21.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_22.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_23.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_24.gif" /></a></li>
+                                            <img src="/img/qq/emo_22.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_23.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_24.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_25.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_26.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_27.gif" /></a></li>
+                                            <img src="/img/qq/emo_25.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_26.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_27.gif" /></a></li>
                                     <li><a href="javascript:;">
                                             <img src="img/emo_28.gif" /></a></li><li><a href="javascript:;">
                                             <img src="img/emo_29.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_30.gif" /></a></li>
+                                            <img src="/img/qq/emo_30.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_31.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_32.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_33.gif" /></a></li>
+                                            <img src="/img/qq/emo_31.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_32.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_33.gif" /></a></li>
                                     <li><a href="javascript:;">
                                             <img src="img/emo_34.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_35.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_36.gif" /></a></li>
+                                            <img src="/img/qq/emo_35.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_36.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_37.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_38.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_39.gif" /></a></li>
+                                            <img src="/img/qq/emo_37.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_38.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_39.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_40.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_41.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_42.gif" /></a></li>
+                                            <img src="/img/qq/emo_40.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_41.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_42.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_43.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_44.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_45.gif" /></a></li>
+                                            <img src="/img/qq/emo_43.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_44.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_45.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_46.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_47.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_48.gif" /></a></li>
+                                            <img src="/img/qq/emo_46.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_47.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_48.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_49.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_50.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_51.gif" /></a></li>
+                                            <img src="/img/qq/emo_49.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_50.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_51.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_52.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_53.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_54.gif" /></a></li>
+                                            <img src="/img/qq/emo_52.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_53.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_54.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_55.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_56.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_57.gif" /></a></li>
+                                            <img src="/img/qq/emo_55.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_56.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_57.gif" /></a></li>
                                     <li><a href="javascript:;">
-                                            <img src="/img/emo_58.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_59.gif" /></a></li><li><a href="javascript:;">
-                                            <img src="/img/emo_60.gif" /></a></li>
+                                            <img src="/img/qq/emo_58.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_59.gif" /></a></li><li><a href="javascript:;">
+                                            <img src="/img/qq/emo_60.gif" /></a></li>
                                 </ul>
                             </div>
                         </div>

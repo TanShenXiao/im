@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Created by PhpStorm.
@@ -6,10 +5,8 @@
  * Date: 2018/4/5
  * Time: 10:57
  */
-
 namespace frontend\models;
-
-
+ 
 use yii\base\Model;
 use backend\models\MemberUser;
 use common\models\Admin_fd;
