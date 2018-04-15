@@ -19,7 +19,10 @@ $(document).ready(function(){
         }
         websocket.onmessage=function($data){
             function h(){
-                -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='img/").replace("#*",".gif'/>"),h());
+                -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='/img/").replace("#*",".gif'/>"),h());
+            }
+            function wx(){
+                -1!=g.indexOf("*#emo_")&&(g=g.replace("#wx","<img src='/img/qq/").replace("wx#",".gif'/>"),wx());
             }
             function img(){
                 -1!=g.indexOf("*{im")&&(g=g.replace("*{","<img  style='max-width:80%;' src='/RecordImg/").replace("}*","'/>"),img());
@@ -50,6 +53,7 @@ $(document).ready(function(){
             {
                 var g=obj.msg;
                 h();
+                wx();
                 img();
                 //var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+"</div><div ><h5 style='text-align: left' class='clearfix' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div>"+"</h5>"+"<div class='content-text'>"+g+"</div>"+"</div><div style='clear:both;'></div>";
                
@@ -84,6 +88,9 @@ $(document).ready(function(){
             function h(){
                 -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='img/").replace("#*",".gif'/>"),h());
             }
+            function wx(){
+                -1!=g.indexOf("#wxqq/emo")&&(g=g.replace("#wx","<img src='/img/").replace("wx#",".gif'/>"),wx());
+            }
             function img(){
                 -1!=g.indexOf("*{im")&&(g=g.replace("*{","<img  style='max-width:80%;' src='/RecordImg/").replace("}*","'/>"),img());
             }
@@ -91,6 +98,7 @@ $(document).ready(function(){
             f+=e.getFullYear()+"-",f+=e.getMonth()+1+"-",f+=e.getDate()+"  ",f+=e.getHours()+":",f+=e.getMinutes()+":",f+=e.getSeconds();
             var g=$("#textarea").val();
             h();
+            wx();
             img();
             //var i="<div class='message clearfix'><div class='user-logo2'><img src='"+window.portrait+"'></div>"+"<div class='wrap-text2'>"+"<h5 class='clearfix'>"+window.uname+"<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
            
@@ -133,8 +141,15 @@ $(document).ready(function(){
                 $(".ctb01").mouseover(function(){$(".wl_faces_box").show()}).mouseout(function(){$(".wl_faces_box").hide()});
                 $(".wl_faces_box").mouseover(function(){$(".wl_faces_box").show()}).mouseout(function(){$(".wl_faces_box").hide()});
                 $(".wl_faces_close").click(function(){$(".wl_faces_box").hide()});
-                $(".wl_faces_main img").click(function(){var a=$(this).attr("src");
-                $("#textarea").val($("#textarea").val()+"*#"+a.substr(a.indexOf("img/")+4,6)+"#*");
+                $(".wl_faces img").click(function(){
+                    var a=$(this).attr("src");
+                    var b=$(this).attr("data");
+                    if(b == 'zy'){
+                        $("#textarea").val($("#textarea").val()+"*#"+a.substr(a.indexOf("img/")+4,6)+"#*");
+                    }else if(b =='wx'){
+                        $("#textarea").val($("#textarea").val()+"#wx"+a.substr(a.indexOf("img/")+4,9)+"wx#");
+                    }
+
                 $("#textarea").focusEnd();
                 $(".wl_faces_box").hide()});
                 $(".chat02_bar img").click(function(){e()});
