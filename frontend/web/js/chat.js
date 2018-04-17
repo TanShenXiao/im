@@ -15,7 +15,8 @@ $(document).ready(function(){
         sockent();
 		
         websocket.onopen=function (){
-            			$(".chat02_title").append('<a href="javascript:sockent();"><span style="float:right;line-height:35px;color:#0f74a8;margin-right:8px;">已连接</span></a>');
+                        window.isok=true;
+            			$(".chat02_title").append('<a href="javascript:sockent();"><span id="success" style="float:right;line-height:35px;color:#0f74a8;margin-right:8px;">已连接</span></a>');
         }
         websocket.onmessage=function($data){
             function h(){
@@ -55,10 +56,16 @@ $(document).ready(function(){
 
         websocket.onclose=function ()
         {
+            window.isok=false;
+            $("#success").text('');
 			$(".chat02_title").append('<a href="javascript:window.location.reload();"><span style="float:right;line-height:35px;color:#0f74a8;">你已掉线请点击重连</span></a>');
         }
 
         function e(){
+            if(!window.isok){
+                alert('你已掉线请重新连接');
+                return ;
+            }
             function h(){
                 -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='img/").replace("#*",".gif'/>"),h());
             }
