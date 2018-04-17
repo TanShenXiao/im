@@ -33,11 +33,9 @@ $(document).ready(function(){
             f+=e.getFullYear()+"-",f+=e.getMonth()+1+"-",f+=e.getDate()+"  ",f+=e.getHours()+":",f+=e.getMinutes()+":",f+=e.getSeconds();
             if(obj.type == 110){
                 var g=obj.msg;
-<<<<<<< HEAD
                 var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+"<h5 class='clearfix' style='color:red'>系统提示<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
                 // i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
                 null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
-=======
                 //var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+"<h5 class='clearfix' style='color:red'>系统提示<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
                 
 				
@@ -54,7 +52,6 @@ $(document).ready(function(){
 				
 				// i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
                 null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),$("#textarea").val(""),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
->>>>>>> 015992e8c3ea8f5647680da840aff169037a39f5
 
             }else if(obj.type == 1)
             {
@@ -62,10 +59,9 @@ $(document).ready(function(){
                 h();
                 wx();
                 img();
-<<<<<<< HEAD
                 var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+"</div><div ><h5 style='text-align: left' class='clearfix' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div>"+"</h5>"+"<div class='content-text'>"+g+"</div>"+"</div><div style='clear:both;'></div>";
                 null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
-=======
+
                 //var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+"</div><div ><h5 style='text-align: left' class='clearfix' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div>"+"</h5>"+"<div class='content-text'>"+g+"</div>"+"</div><div style='clear:both;'></div>";
                
 			   var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+
@@ -77,7 +73,6 @@ $(document).ready(function(){
 
 
 			   null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),$("#textarea").val(""),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
->>>>>>> 015992e8c3ea8f5647680da840aff169037a39f5
                 $("#bgm").get(0).play();
             }else if(obj.type == 111){
                 var tsx="<ul>";
