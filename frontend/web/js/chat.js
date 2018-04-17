@@ -20,7 +20,10 @@ $(document).ready(function(){
         }
         websocket.onmessage=function($data){
             function h(){
-                -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='img/").replace("#*",".gif'/>"),h());
+                -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='/img/").replace("#*",".gif'/>"),h());
+            }
+            function wx(){
+                -1!=g.indexOf("*#emo_")&&(g=g.replace("#wx","<img src='/img/qq/").replace("wx#",".gif'/>"),wx());
             }
             function img(){
                 -1!=g.indexOf("*{im")&&(g=g.replace("*{","<img  style='max-width:80%;' src='/RecordImg/").replace("}*","'/>"),img());
@@ -30,17 +33,51 @@ $(document).ready(function(){
             f+=e.getFullYear()+"-",f+=e.getMonth()+1+"-",f+=e.getDate()+"  ",f+=e.getHours()+":",f+=e.getMinutes()+":",f+=e.getSeconds();
             if(obj.type == 110){
                 var g=obj.msg;
+<<<<<<< HEAD
                 var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+"<h5 class='clearfix' style='color:red'>系统提示<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
                 // i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
                 null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
+=======
+                //var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+"<h5 class='clearfix' style='color:red'>系统提示<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
+                
+				
+				//var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+"<h5 class='clearfix' style='color:red'>系统提示<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
+                
+				var i="<div class='message clearfix'><div class='user-logo'>系统"+"</div>"+"<div class='wrap-text' >"+
+				"<div style='font-size:14px;text-align: left;margin-top: -5px;color: blue;' >系统提示</div>"+
+				
+				"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
+                
+				
+				
+				
+				
+				// i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
+                null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),$("#textarea").val(""),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
+>>>>>>> 015992e8c3ea8f5647680da840aff169037a39f5
 
             }else if(obj.type == 1)
             {
                 var g=obj.msg;
                 h();
+                wx();
                 img();
+<<<<<<< HEAD
                 var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+"</div><div ><h5 style='text-align: left' class='clearfix' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div>"+"</h5>"+"<div class='content-text'>"+g+"</div>"+"</div><div style='clear:both;'></div>";
                 null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
+=======
+                //var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+"</div><div ><h5 style='text-align: left' class='clearfix' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div>"+"</h5>"+"<div class='content-text'>"+g+"</div>"+"</div><div style='clear:both;'></div>";
+               
+			   var i="<div class='message clearfix'>"+"<div class='user-logo2'><img src='"+obj.portrait+"'>"+
+			   
+			   "</div><div ><div style='font-size:14px;text-align: left;margin-top: -5px;color: blue;' >"+obj.name+"<div clsss='clearfix' style='float:right;'><span></span></div></div>"
+			   
+			   +"<div class='content-text' style='margin-top: 6px;' >"+g+"</div>"+"</div><div style='clear:both;'></div>";
+               
+
+
+			   null!=g&&""!=g?($(".mes"+a).append(i),$(".chat01_content").scrollTop($(".mes"+a).height()),$("#textarea").val(""),message()):alert("\u8bf7\u8f93\u5165\u804a\u5929\u5185\u5bb9!");
+>>>>>>> 015992e8c3ea8f5647680da840aff169037a39f5
                 $("#bgm").get(0).play();
             }else if(obj.type == 111){
                 var tsx="<ul>";
@@ -69,6 +106,9 @@ $(document).ready(function(){
             function h(){
                 -1!=g.indexOf("*#emo_")&&(g=g.replace("*#","<img src='img/").replace("#*",".gif'/>"),h());
             }
+            function wx(){
+                -1!=g.indexOf("#wxqq/emo")&&(g=g.replace("#wx","<img src='/img/").replace("wx#",".gif'/>"),wx());
+            }
             function img(){
                 -1!=g.indexOf("*{im")&&(g=g.replace("*{","<img  style='max-width:80%;' src='/RecordImg/").replace("}*","'/>"),img());
             }
@@ -76,9 +116,26 @@ $(document).ready(function(){
             f+=e.getFullYear()+"-",f+=e.getMonth()+1+"-",f+=e.getDate()+"  ",f+=e.getHours()+":",f+=e.getMinutes()+":",f+=e.getSeconds();
             var g=$("#textarea").val();
             h();
+            wx();
             img();
-            var i="<div class='message clearfix'><div class='user-logo2'><img src='"+window.portrait+"'></div>"+"<div class='wrap-text2'>"+"<h5 class='clearfix'>"+window.uname+"<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
-           // i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
+            //var i="<div class='message clearfix'><div class='user-logo2'><img src='"+window.portrait+"'></div>"+"<div class='wrap-text2'>"+"<h5 class='clearfix'>"+window.uname+"<div clsss'clearfix' style='float:right;'><span></span></div></h5>"+"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
+           
+		   
+		   var i="<div class='message clearfix'><div class='user-logo2'><img src='"+window.portrait+"'></div>"+"<div class='wrap-text2'>"+
+		  
+
+		  '<div style="font-size:14px;text-align: left;margin-top: -5px;color: blue;"  >'+window.uname+"</div>"
+		   
+		   
+		   
+		   
+		   
+		   +"<div class='content-text'>"+g+"</div>"+"</div>"+"<div style='clear:both;'></div>"+"</div>";
+           
+		   
+		   
+		   
+		   // i+="<div class='message message2 clearfix'>"+"<div class='user-logo2'>"+"<img src='"+c+"'/>"+"</div>"+"<div class='wrap-text2'>"+"<h5 style='text-align: left' class='clearfix' >"+d+"</h5>"+"<div>"+g+"\u7684\u56de\u590d\u5185\u5bb9</div>"+"</div>"+"<div class='wrap-ri2'>"+"<div clsss='clearfix' style='float:right;'><span>"+f+"</span></div>"+"</div>"+"<div style='clear:both;'></div>";
             if(null!=g&&""!=g){
                 var jsondata={type:1,portrait:window.portrait,msg:g};
                 websocket.send(JSON.stringify(jsondata));
@@ -102,8 +159,15 @@ $(document).ready(function(){
                 $(".ctb01").mouseover(function(){$(".wl_faces_box").show()}).mouseout(function(){$(".wl_faces_box").hide()});
                 $(".wl_faces_box").mouseover(function(){$(".wl_faces_box").show()}).mouseout(function(){$(".wl_faces_box").hide()});
                 $(".wl_faces_close").click(function(){$(".wl_faces_box").hide()});
-                $(".wl_faces_main img").click(function(){var a=$(this).attr("src");
-                $("#textarea").val($("#textarea").val()+"*#"+a.substr(a.indexOf("img/")+4,6)+"#*");
+                $(".wl_faces img").click(function(){
+                    var a=$(this).attr("src");
+                    var b=$(this).attr("data");
+                    if(b == 'zy'){
+                        $("#textarea").val($("#textarea").val()+"*#"+a.substr(a.indexOf("img/")+4,6)+"#*");
+                    }else if(b =='wx'){
+                        $("#textarea").val($("#textarea").val()+"#wx"+a.substr(a.indexOf("img/")+4,9)+"wx#");
+                    }
+
                 $("#textarea").focusEnd();
                 $(".wl_faces_box").hide()});
                 $(".chat02_bar img").click(function(){e()});
