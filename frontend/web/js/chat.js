@@ -100,7 +100,7 @@ $(document).ready(function(){
 
         function e(){
             if(!window.isok){
-                alert('你已掉线请重新连接');
+                alert('你已掉线请请点击下方重新连接');
                 return ;
             }
             function h(){
